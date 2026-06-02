@@ -1,0 +1,23 @@
+
+server:
+  port: 8080 # 后端运行端口
+
+spring:
+  datasource:
+    url: jdbc:mysql://mysql:3306/blog_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456789 #  改成你自己的MySQL密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # Mapper XML文件位置
+  configuration:
+    map-underscore-to-camel-case: true # 自动下划线转驼峰（create_time → createTime）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印SQL语句，方便调试
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html # 接口文档访问地址
