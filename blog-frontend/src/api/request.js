@@ -6,7 +6,7 @@ import axios from 'axios'
 import { markTokenInvalid } from '../utils/auth'
 
 const service = axios.create({
-  baseURL: 'http://localhost:8080/api',
+  baseURL: 'http://8.148.6.228/api',
   timeout: 10000
 })
 

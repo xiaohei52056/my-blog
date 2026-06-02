@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   base: '/my-blog/', // 必须添加，对应服务器的子路径
-  build: {
-    outDir: 'dist' // 打包输出目录
+  server: {
+    port: 5173
   }
 })
