@@ -1,4 +1,3 @@
-#这些文件不需要提交到GitHub
 # IDE
 .idea/
 *.iml
@@ -6,21 +5,29 @@
 *.iws
 .vscode/
 
-# Java
-target/
-*.jar
-*.war
-*.ear
+# Java 编译缓存
+HELP.md
+.mvn/wrapper/maven-wrapper.jar
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+nbproject/
+nbbuild/
+nbdist/
+.nb-gradle/
 
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-dist/
-
-# 系统文件
+# 系统垃圾
 .DS_Store
 Thumbs.db
 
-# 配置文件（防止泄露密码）
-blog-backend/src/main/resources/application.yml
+# 日志
+npm-debug.log
+yarn-error.log
+
+# 敏感配置
+application.yml
+bootstrap.yml
