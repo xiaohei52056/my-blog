@@ -3,12 +3,12 @@
     <div class="container">
       <h1 class="logo">我的博客</h1>
       <div class="nav-links">
-        <router-link to="/">首页</router-link>
-        <router-link to="/publish">发布文章</router-link>
+        <router-link to="/my-blog/">首页</router-link>
+        <router-link to="/my-blog/publish">发布文章</router-link>
 
         <!-- 未登录状态 -->
         <template v-if="!authState.token">
-          <router-link to="/users/login">登录/注册</router-link>
+          <router-link to="/my-blog/users/login">登录/注册</router-link>
         </template>
 
         <!-- 已登录状态 -->
@@ -32,7 +32,7 @@ const authState = useAuth()
 // 退出登录
 const handleLogout = () => {
   logout()
-  router.push('/')
+  router.push('/my-blog/')
 }
 
 // 页面加载时，如果有 token 就同步一次用户信息（用于刷新页面后恢复显示）
